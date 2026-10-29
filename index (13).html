@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#D7263D">
+<title>Mix House — косметика, аксессуары и мелочи в центре города</title>
+<meta name="description" content="Mix House: косметика, аксессуары для волос, ногти и ресницы, парфюмерия, аксессуары для телефона и небольшая техника. Подберём нужное за 30 секунд.">
+<meta property="og:title" content="Mix House — косметика, аксессуары и мелочи">
+<meta property="og:description" content="Подберём косметику под ваш тип кожи за 30 секунд.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;700&display=swap&subset=cyrillic" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"Mix House","telephone":"+77053570062","address":{"@type":"PostalAddress","streetAddress":"проспект Бекзата Саттарханова, 60/2"},"openingHours":"Mo-Su 09:00-23:00"}</script>
+<style>
+:root{
+  --bg:#FFF8F7;--ink:#2A1114;--muted:#6E5457;--line:#F1D9D8;--card:#FFFFFF;--brand:#D7263D;--brand-d:#A81D2D;
+  --rose:#D7263D;--lilac:#FF8A8A;--mint:#FFC2BD;--blend:multiply;--wa:#1FAF5A;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#1C0C10;--ink:#FBEFEF;--muted:#C9A9AC;--line:#4A2A30;--card:#2A1419;--brand:#D7263D;--brand-d:#A81D2D;--blend:screen}
+}
+:root[data-theme="dark"]{--bg:#1C0C10;--ink:#FBEFEF;--muted:#C9A9AC;--line:#4A2A30;--card:#2A1419;--brand:#D7263D;--brand-d:#A81D2D;--blend:screen}
+html{height:100%;scroll-padding-top:20px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;line-height:1.6;font-size:17px;overflow-x:hidden}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.promo{background:var(--ink);color:var(--bg);text-align:center;font-size:14px;font-weight:500;padding:9px 14px}
+.promo a{font-weight:700}
+header{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Unbounded',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em}
+nav{display:flex;gap:24px;font-weight:500;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.mark circle{mix-blend-mode:var(--blend)}
+.btn{display:inline-block;padding:15px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid var(--ink);background:transparent;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;padding:44px 0 80px}
+h1{font-family:'Unbounded',sans-serif;font-weight:700;font-size:clamp(36px,6.4vw,70px);line-height:1.03;letter-spacing:-.04em;margin:0 0 22px}
+.lead{font-size:19px;color:var(--muted);max-width:30em;margin:0 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.mix{position:relative;aspect-ratio:1;max-width:440px;width:100%;justify-self:center}
+.mix i{position:absolute;width:64%;aspect-ratio:1;border-radius:50%;mix-blend-mode:var(--blend);transition:transform .35s ease-out}
+.mix .a{background:var(--rose);left:0;top:4%;animation:a 1.6s cubic-bezier(.2,.8,.2,1) both}
+.mix .b{background:var(--lilac);right:0;top:4%;animation:b 1.6s cubic-bezier(.2,.8,.2,1) both}
+.mix .c{background:var(--mint);left:18%;bottom:0;animation:c 1.6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes a{from{transform:translate(-30%,-14%)}}
+@keyframes b{from{transform:translate(30%,-14%)}}
+@keyframes c{from{transform:translate(0,32%)}}
+@media (prefers-reduced-motion:reduce){.mix i{animation:none!important}html{scroll-behavior:auto}}
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-family:'Unbounded',sans-serif;font-weight:500;font-size:clamp(26px,4vw,40px);letter-spacing:-.03em;line-height:1.15;margin:0 0 12px}
+.sub{color:var(--muted);margin:0 0 34px;max-width:36em}
+/* quiz */
+.quiz{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:clamp(22px,4vw,44px);position:relative;overflow:hidden}
+.quiz:before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:var(--lilac);opacity:.25}
+.step{display:none;position:relative}
+.step.on{display:block}
+.q{font-family:'Unbounded',sans-serif;font-weight:500;font-size:clamp(20px,3vw,26px);margin:0 0 20px;letter-spacing:-.02em}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{padding:13px 22px;border-radius:999px;border:2px solid var(--line);background:var(--bg);font-weight:600;transition:all .2s}
+.opt:hover{border-color:var(--ink)}
+.opt[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.progress{font-size:14px;color:var(--muted);margin-bottom:12px}
+.res h3{font-family:'Unbounded',sans-serif;font-weight:500;font-size:24px;margin:0 0 10px}
+.res ul{margin:0 0 24px;padding-left:20px;color:var(--muted)}
+.res li{margin:4px 0}
+.again{background:none;border:0;text-decoration:underline;color:var(--muted);margin-left:14px}
+/* catalog */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.tab{padding:10px 20px;border-radius:999px;border:2px solid var(--line);background:transparent;font-weight:600;font-size:15px}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:16px}
+.item{border-radius:24px;background:var(--card);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+.item .pic{height:140px;position:relative}
+.item .pic i{position:absolute;width:90px;height:90px;border-radius:50%;mix-blend-mode:var(--blend)}
+.item .pic i:first-child{left:22%;top:20px}
+.item .pic i:last-child{left:44%;top:30px}
+.item .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.item h3{margin:0;font-size:17px}
+.item p{margin:0;color:var(--muted);font-size:14px;flex:1}
+.item a{font-weight:700;font-size:14px;margin-top:10px}
+.item[hidden]{display:none}
+.note{margin-top:22px;font-size:14px;color:var(--muted)}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px;counter-reset:s}
+.steps div{counter-increment:s}
+.steps div:before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--bg);font-family:'Unbounded',sans-serif;font-weight:700;margin-bottom:14px}
+.steps h3{margin:0 0 6px;font-size:18px}
+.steps p{margin:0;color:var(--muted)}
+/* cta */
+.cta{border-radius:34px;padding:clamp(28px,5vw,60px);background:linear-gradient(120deg,var(--rose),var(--lilac) 60%,var(--mint));color:#2A1B33}
+.cta h2{margin-bottom:14px}
+.cta p{max-width:34em;margin:0 0 26px;font-size:18px}
+.cta .btn{border-color:#2A1B33}
+.cta .btn.main{background:#2A1B33;color:#fff}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-weight:700;cursor:pointer;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:26px;line-height:1;transition:transform .25s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{margin:12px 0 0;color:var(--muted);max-width:40em}
+/* contacts */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+dl{margin:0}
+.addr{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:26px;margin-bottom:26px}
+.lbl{font-weight:700;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.street{font-family:'Unbounded',sans-serif;font-weight:500;font-size:22px;line-height:1.3;margin:10px 0 20px}
+dt{font-weight:700;margin-top:18px}
+dt:first-child{margin-top:0}
+dd{margin:2px 0 0;color:var(--muted)}
+.form{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:26px;display:grid;gap:14px}
+.form h3{margin:0;font-family:'Unbounded',sans-serif;font-weight:500;font-size:20px}
+.form label{font-weight:600;font-size:14px;display:grid;gap:6px}
+.form input,.form textarea{font:inherit;padding:13px 16px;border-radius:14px;border:2px solid var(--line);background:var(--bg);color:var(--ink)}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--lilac)}
+footer{padding:30px 0 100px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:999px;box-shadow:0 8px 24px rgba(31,175,90,.4)}
+@media (max-width:780px){
+  .hero,.info{grid-template-columns:1fr}
+  .mix{max-width:290px;order:-1}
+  nav{display:none}
+  .hero{padding-top:14px}
+  section{padding:54px 0}
+}
+
+/* red sign style */
+.promo{background:#7E0F1F;color:#fff}
+.wrap>header,.hero{background:var(--brand);box-shadow:0 0 0 100vmax var(--brand);clip-path:inset(0 -100vmax);color:#fff}
+.brand{color:#fff}
+.mark circle{mix-blend-mode:normal}
+nav a{color:rgba(255,255,255,.88)}
+nav a:hover{color:#fff}
+.hero h1{color:#fff}
+.hero .lead{color:rgba(255,255,255,.92)}
+.hero .btn.main{background:#fff;color:var(--brand);border-color:#fff}
+.hero .btn.wa{background:transparent;border-color:#fff;color:#fff}
+.mix i{mix-blend-mode:normal;opacity:.9}
+.mix .a{background:#fff}
+.mix .b{background:#FFB3AE}
+.mix .c{background:#7E0F1F}
+.btn.main{background:var(--brand);border-color:var(--brand);color:#fff}
+.opt[aria-pressed="true"],.tab[aria-selected="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+.steps div:before{background:var(--brand);color:#fff}
+.quiz:before{background:var(--brand);opacity:.12}
+.cta{background:linear-gradient(120deg,#D7263D,#A81D2D);color:#fff}
+.cta .btn{border-color:#fff;color:#fff}
+.cta .btn.main{background:#fff;color:var(--brand)}
+.item .pic{height:170px;overflow:hidden}
+.item .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--card)}
+
+/* ribbon, icons, map, reveal */
+.ribbon{width:100vw;margin-left:calc(50% - 50vw);overflow:hidden;background:#7E0F1F;color:#fff;padding:16px 0;white-space:nowrap}
+.ribbon.alt{background:var(--brand)}
+.track{display:inline-flex;animation:slide 40s linear infinite}
+.track span{display:inline-flex;align-items:center;font-family:'Unbounded',sans-serif;font-weight:700;font-size:20px;letter-spacing:.06em;text-transform:uppercase}
+.track span:after{content:"";width:12px;height:12px;border-radius:50%;background:#fff;opacity:.85;margin:0 34px}
+@keyframes slide{to{transform:translateX(-50%)}}
+.ico{width:58px;height:58px;border-radius:50%;background:var(--brand);display:grid;place-items:center;margin-bottom:16px}
+.mapwrap{margin-top:34px;border-radius:26px;overflow:hidden;border:1px solid var(--line);height:360px;background:var(--card)}
+.mapwrap iframe{width:100%;height:100%;border:0;display:block}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.track{animation:none}.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="promo">Скоро открытие в центре города. Напишите нам в <a href="#" data-wa="Здравствуйте! Хочу узнать про открытие Mix House.">WhatsApp</a></div>
+<div class="wrap">
+  <header>
+    <a class="brand" href="#top" aria-label="Mix House — на главную">
+      <svg class="mark" width="40" height="34" viewBox="0 0 40 34" aria-hidden="true"><circle cx="12" cy="13" r="10" fill="none" stroke="#fff" stroke-width="2"/><circle cx="28" cy="13" r="10" fill="none" stroke="#fff" stroke-width="2"/><circle cx="20" cy="22" r="10" fill="none" stroke="#fff" stroke-width="2"/></svg>
+      mix house
+    </a>
+    <nav><a href="#match">Подбор ухода</a><a href="#catalog">Ассортимент</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a></nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>Косметика, аксессуары и мелочи на каждый день</h1>
+        <p class="lead">Mix House в центре города. Ответьте на несколько вопросов, и мы подберём то, что вам нужно, под ваш запрос и бюджет.</p>
+        <div class="btns">
+          <a class="btn main" href="#match">Подобрать за 30 секунд</a>
+          <a class="btn wa" href="#" data-wa="Здравствуйте! Хочу узнать про Mix House.">Написать в WhatsApp</a>
+        </div>
+      </div>
+      <div class="mix" id="mix" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i></div>
+    </div>
+
+    <div class="ribbon" aria-hidden="true"><div class="track" data-t></div></div>
+    <section id="match">
+      <h2>Подберём нужное за 30 секунд</h2>
+      <p class="sub">Выберите, что ищете, и получите готовую подборку. Продавец уточнит наличие и цены в WhatsApp.</p>
+      <div class="quiz" id="quiz"><div id="qbox" aria-live="polite"></div></div>
+    </section>
+
+    <section id="catalog">
+      <h2>Что у нас есть</h2>
+      <p class="sub">Примеры категорий. Актуальное наличие и цены уточняйте в WhatsApp: ответим быстро.</p>
+      <div class="tabs" role="tablist" id="tabs">
+        <button class="tab" role="tab" aria-selected="true" data-f="all">Всё</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="makeup">Макияж</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="face">Лицо</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="hair">Волосы</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="body">Тело</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="nails">Ногти и ресницы</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="tools">Аксессуары</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="perfume">Парфюмерия</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="tech">Электроника и техника</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="why">
+      <h2>Почему «mix»?</h2>
+      <p class="sub">Mix значит «смесь». В Mix House смешалось всё, что нужно каждый день: косметика, аксессуары для волос, мелочи для телефона и дома. Не нужно ходить по разным магазинам.</p>
+      <div class="why">
+        <div><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="10" r="5"/><circle cx="15" cy="10" r="5"/><circle cx="12" cy="15" r="5"/></svg></div><h3>Всё в одном месте</h3><p>Макияж, уход, аксессуары, парфюмерия и небольшая техника под одной крышей.</p></div>
+        <div><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H10l-4 4v-4H4z"/></svg></div><h3>Поможем выбрать</h3><p>Расскажите, что нужно, и мы предложим варианты под ваш запрос и бюджет.</p></div>
+        <div><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg></div><h3>Удобно найти</h3><p>Мы в центре города и работаем каждый день с 9:00 до 23:00.</p></div>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>Как купить</h2>
+      <div class="steps">
+        <div><h3>Расскажите, что нужно</h3><p>Пройдите подбор на сайте или просто напишите нам.</p></div>
+        <div><h3>Получите подборку</h3><p>Предложим варианты под ваш запрос и бюджет.</p></div>
+        <div><h3>Заберите в магазине</h3><p>Приходите в центр города, посмотрите товары вживую и заберите покупку.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="cta">
+        <h2>Следите за новинками в Instagram</h2>
+        <p>Показываем поступления, делаем обзоры и рассказываем о новинках. Подпишитесь, чтобы ничего не пропустить.</p>
+        <a class="btn main" href="https://www.instagram.com/mix_house.shop/" target="_blank" rel="noopener">Открыть @mix_house.shop</a>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Частые вопросы</h2>
+      <details><summary>Можно ли попробовать косметику перед покупкой?</summary><p>На часть товаров у нас есть тестеры, но не на все. Спросите консультанта, что можно попробовать, и он поможет подобрать оттенок и текстуру.</p></details>
+      <details><summary>Вы помогаете выбрать уход?</summary><p>Конечно. Расскажите про тип кожи и что хотите улучшить, и мы предложим подходящие варианты.</p></details>
+      <details><summary>Можно ли заказать и забрать позже?</summary><p>Да. Напишите в WhatsApp, что нужно, и мы отложим товар до вашего прихода.</p></details>
+      <details><summary>Какие товары у вас есть?</summary><p>Косметика для макияжа и ухода за лицом, телом и волосами, парфюмерия, аксессуары для волос, ногти и ресницы, кисти и спонжи, аксессуары для телефона и небольшая техника. Точное наличие уточняйте в WhatsApp.</p></details>
+    </section>
+
+    <div class="ribbon alt" aria-hidden="true"><div class="track" data-t></div></div>
+    <section id="contacts">
+      <h2>Приходите в гости</h2>
+      <p class="sub">Мы в центре города. Напишите заранее, и мы подготовим для вас подборку.</p>
+      <div class="info">
+        <div class="side">
+          <div class="addr">
+            <span class="lbl">Адрес</span>
+            <p class="street">проспект Бекзата Саттарханова, 60/2</p>
+            <a class="btn wa" href="https://2gis.kz/turkestan/geo/70000001112607337" target="_blank" rel="noopener">Открыть в 2GIS</a>
+          </div>
+          <dl>
+            <dt>Часы работы</dt><dd>Ежедневно, 9:00–23:00</dd>
+            <dt>Телефон и WhatsApp</dt><dd><a href="tel:+77053570062">+7 705 357 0062</a></dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/mix_house.shop/" target="_blank" rel="noopener">@mix_house.shop</a></dd>
+          </dl>
+        </div>
+        <form class="form" id="form">
+          <h3>Оставьте заявку</h3>
+          <label>Ваше имя<input id="fn" autocomplete="name" required></label>
+          <label>Что ищете?<textarea id="fm" rows="3" placeholder="Например, крем для сухой кожи"></textarea></label>
+          <button class="btn wa" type="submit">Отправить в WhatsApp</button>
+        </form>
+      </div>
+      <div class="mapwrap"><iframe title="Карта: Mix House" src="https://www.google.com/maps?q=%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%91%D0%B5%D0%BA%D0%B7%D0%B0%D1%82%D0%B0%20%D0%A1%D0%B0%D1%82%D1%82%D0%B0%D1%80%D1%85%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%2060/2%2C%20%D0%A2%D1%83%D1%80%D0%BA%D0%B5%D1%81%D1%82%D0%B0%D0%BD&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    </section>
+  </main>
+
+  <footer><span>© Mix House</span><span>Косметика, аксессуары и мелочи</span></footer>
+</div>
+<a class="fab" href="#" data-wa="Здравствуйте! Хочу задать вопрос про Mix House.">Написать нам</a>
+
+<script>
+// ЗАМЕНИТЕ номер на свой: только цифры, без плюса и пробелов
+var WA="77053570062";
+function wa(t){return "https://wa.me/"+WA+"?text="+encodeURIComponent(t)}
+document.querySelectorAll("[data-wa]").forEach(function(a){a.href=wa(a.dataset.wa);a.target="_blank";a.rel="noopener"});
+
+// Подбор
+var QS=[
+ {k:"goal",q:"Что ищете?",o:["Уход за лицом","Макияж","Волосы","Ногти и ресницы","Уход за телом","Парфюмерия","Для телефона","Техника","Подарок"]},
+ {by:{
+  "Уход за лицом":{q:"Какая у вас кожа?",o:["Сухая","Жирная","Комбинированная","Чувствительная","Не знаю"]},
+  "Макияж":{q:"Что хотите подобрать?",o:["Тон и лицо","Глаза","Губы","Брови","Полный образ"]},
+  "Волосы":{q:"Что нужно для волос?",o:["Уход и укладка","Резинки и заколки","Ободки","Расчёски"]},
+  "Ногти и ресницы":{q:"Что ищете?",o:["Накладные ресницы","Накладные ногти","Клей","Инструменты"]},
+  "Уход за телом":{q:"Что нужно коже?",o:["Крем для рук","Гель для душа","Скраб","Депиляция"]},
+  "Парфюмерия":{q:"Какие ароматы любите?",o:["Цветочные","Сладкие","Свежие","Древесные и тёплые"]},
+  "Для телефона":{q:"Что нужно?",o:["Зарядка","Кабель","Наушники","Power bank","Для машины"]},
+  "Техника":{q:"Что ищете?",o:["Фен или утюжок","Триммер","Для кухни","Другое"]},
+  "Подарок":{q:"Кому дарите?",o:["Маме или подруге","Девушке","Коллеге","Себе"]}
+ }},
+ {k:"budget",q:"Какой у вас бюджет?",o:["Недорого","Средний","Премиум","Пока не знаю"]}
+];
+var T={
+ "Уход за лицом":{"Сухая":["Мягкое очищение без пересушивания","Увлажняющий крем","Тканевые маски для увлажнения"],"Жирная":["Лёгкая пенка для умывания","Тоник для баланса кожи","Патчи и маски для проблемных зон"],"Комбинированная":["Мягкая пенка","Мицеллярная вода","Лёгкий крем для всего лица"],"Чувствительная":["Нежное очищение","Мицеллярная вода","Успокаивающие маски"],"Не знаю":["Экспресс-подбор у консультанта","Универсальная пенка для умывания","Базовый уход"]},
+ "Макияж":{"Тон и лицо":["Тональные средства и ББ под ваш оттенок","Пудра и консилер","Румяна и хайлайтер"],"Глаза":["Тушь для объёма","Тени и палетки","Подводка и карандаши"],"Губы":["Помады и тинты","Карандаши для контура"],"Брови":["Карандаш или гель для бровей","Тени и кисти для бровей"],"Полный образ":["Тон, глаза и губы в одном стиле","Кисти и спонжи для нанесения"]},
+ "Волосы":{"Уход и укладка":["Спреи для волос","Мусс и лак для укладки"],"Резинки и заколки":["Резинки на любой вкус","Крабы и заколки"],"Ободки":["Ободки на каждый день","Аксессуары для образа"],"Расчёски":["Массажные расчёски","Расчёски для укладки"]},
+ "Ногти и ресницы":{"Накладные ресницы":["Наборы накладных ресниц","Клей для ресниц"],"Накладные ногти":["Готовые наборы ногтей","Клей для ногтей"],"Клей":["Клей для ресниц","Клей для ногтей"],"Инструменты":["Пинцеты","Аппликаторы и пилки"]},
+ "Уход за телом":{"Крем для рук":["Кремы для рук","Маски для рук"],"Гель для душа":["Гели для душа"],"Скраб":["Скрабы для тела","Бьюти-мелочи для ухода"],"Депиляция":["Воск и полоски для депиляции","Аксессуары для воска"]},
+ "Парфюмерия":{"Цветочные":["Нежные цветочные ароматы","Туалетная вода"],"Сладкие":["Тёплые сладкие ароматы","Парфюм для тела"],"Свежие":["Лёгкие свежие ароматы","Для каждого дня"],"Древесные и тёплые":["Глубокие вечерние ароматы"]},
+ "Для телефона":{"Зарядка":["Зарядки и адаптеры","Для разных телефонов"],"Кабель":["Кабели Type-C, Micro, Lightning"],"Наушники":["Проводные и беспроводные наушники"],"Power bank":["Внешние аккумуляторы"],"Для машины":["Автодержатели","Ароматизаторы для авто"]},
+ "Техника":{"Фен или утюжок":["Фены и приборы для укладки"],"Триммер":["Триммеры и бритвы"],"Для кухни":["Чайники, термосы, миксеры"],"Другое":["Небольшая техника для дома","Уточним наличие в WhatsApp"]},
+ "Подарок":{"Маме или подруге":["Крем для рук и уход","Парфюм или красивые мелочи"],"Девушке":["Косметика, аксессуары или аромат"],"Коллеге":["Небольшой подарок по вашему бюджету"],"Себе":["Что-то новое для вас"]}
+};
+var A=[],st=0,box=document.getElementById("qbox");
+function cur(){var d=QS[st];return d.by?d.by[A[0]]:d}
+function render(){
+  box.innerHTML="";
+  if(st>=QS.length){result();return}
+  var d=cur(),pr=document.createElement("div");pr.className="progress";pr.textContent="Вопрос "+(st+1)+" из "+QS.length;
+  var q=document.createElement("p");q.className="q";q.textContent=d.q;
+  var o=document.createElement("div");o.className="opts";
+  d.o.forEach(function(t){var b=document.createElement("button");b.className="opt";b.textContent=t;b.onclick=function(){A[st]=t;st++;render()};o.appendChild(b)});
+  box.appendChild(pr);box.appendChild(q);box.appendChild(o);
+  if(st>0){var bk=document.createElement("button");bk.className="again";bk.style.marginLeft="0";bk.style.marginTop="18px";bk.textContent="Назад";bk.onclick=function(){st--;render()};box.appendChild(bk)}
+}
+function result(){
+  var w=document.createElement("div");w.className="res";
+  var h=document.createElement("h3");h.textContent="Ваша подборка: "+A[0].toLowerCase()+", "+A[1].toLowerCase();
+  var ul=document.createElement("ul");
+  ((T[A[0]]||{})[A[1]]||[]).concat(["Бюджет: "+A[2].toLowerCase()+". Подберём по нему и уточним наличие."]).forEach(function(t){var li=document.createElement("li");li.textContent=t;ul.appendChild(li)});
+  var a=document.createElement("a");a.className="btn wa";a.textContent="Получить подборку в WhatsApp";a.target="_blank";a.rel="noopener";
+  a.href=wa("Здравствуйте! Я прошла(ел) подбор на сайте Mix House. Ищу: "+A[0]+". Уточнение: "+A[1]+". Бюджет: "+A[2]+". Подскажите, что есть в наличии?");
+  var r=document.createElement("button");r.className="again";r.textContent="Пройти заново";r.onclick=function(){A=[];st=0;render()};
+  w.appendChild(h);w.appendChild(ul);w.appendChild(a);w.appendChild(r);box.appendChild(w);
+}
+render();
+
+// Каталог (замените на свои товары)
+var P=[
+ ["makeup","Тональные средства и ББ","Подберём оттенок под ваш тон","#D7263D","#FF8A8A"],
+ ["makeup","Тушь и подводка","Объём, длина и выразительный взгляд","#FF8A8A","#FFC2BD"],
+ ["makeup","Тени, румяна, хайлайтеры","Палетки и пудры для готового образа","#FFC2BD","#D7263D"],
+ ["makeup","Помады, тинты, карандаши","Для губ и для контура","#D7263D","#FF8A8A"],
+ ["makeup","Всё для бровей","Карандаши, гели, тени и кисти","#FF8A8A","#FFC2BD"],
+ ["face","Пенки для умывания","Очищение под ваш тип кожи","#FFC2BD","#D7263D"],
+ ["face","Мицеллярная вода и тоники","Мягко снимают макияж","#D7263D","#FF8A8A"],
+ ["face","Маски и патчи","Тканевые маски, патчи и кремы для ухода","#FF8A8A","#FFC2BD"],
+ ["hair","Спреи, лак и мусс","Укладка и уход за волосами","#FFC2BD","#D7263D"],
+ ["hair","Резинки, крабы и ободки","Аксессуары для волос на любой вкус","#D7263D","#FF8A8A"],
+ ["hair","Расчёски и массажные щётки","Для ежедневного ухода","#FF8A8A","#FFC2BD"],
+ ["body","Кремы для рук и гели для душа","Мягкость и уход после душа","#FFC2BD","#D7263D"],
+ ["body","Воск и полоски для депиляции","Для гладкой кожи","#D7263D","#FF8A8A"],
+ ["nails","Накладные ресницы","Наборы и клей для ресниц","#FF8A8A","#FFC2BD"],
+ ["nails","Накладные ногти","Готовые наборы и клей","#FFC2BD","#D7263D"],
+ ["tools","Кисти и спонжи","Бьюти-блендеры, кисти, аппликаторы","#D7263D","#FF8A8A"],
+ ["tools","Зеркала, пинцеты, косметички","Мелочи, которые всегда нужны","#FF8A8A","#FFC2BD"],
+ ["perfume","Парфюмерия","Туалетная вода и ароматы для тела","#FFC2BD","#D7263D"],
+ ["tech","Зарядки, кабели, наушники","Для телефона на каждый день","#D7263D","#FF8A8A"],
+ ["tech","Power bank и автоаксессуары","Держатели и ароматизаторы для авто","#FF8A8A","#FFC2BD"],
+ ["tech","Фены, утюги, триммеры","Небольшая техника для дома","#FFC2BD","#D7263D"],
+ ["tech","Техника для кухни","Чайники, термосы, миксеры","#D7263D","#FF8A8A"]
+];
+var g=document.getElementById("grid");
+P.forEach(function(p,i){
+  var d=document.createElement("div");d.className="item";d.dataset.c=p[0];
+  d.innerHTML='<div class="pic"><i style="background:'+p[3]+'"></i><i style="background:'+p[4]+'"></i><img src="images/'+(i<9?"0":"")+(i+1)+'.jpg" alt="" loading="lazy" onerror="this.remove()"></div><div class="body"><h3></h3><p></p><a href="#" target="_blank" rel="noopener">Узнать цену и наличие</a></div>';
+  d.querySelector("h3").textContent=p[1];var im=d.querySelector("img");if(im)im.alt=p[1];d.querySelector("p").textContent=p[2];
+  d.querySelector("a").href=wa("Здравствуйте! Интересует: "+p[1]+". Подскажите цену и наличие.");
+  g.appendChild(d);
+});
+document.getElementById("tabs").addEventListener("click",function(e){
+  var t=e.target.closest(".tab");if(!t)return;
+  document.querySelectorAll(".tab").forEach(function(x){x.setAttribute("aria-selected",x===t)});
+  g.querySelectorAll(".item").forEach(function(i){i.hidden=!(t.dataset.f==="all"||i.dataset.c===t.dataset.f)});
+});
+
+// Форма
+document.getElementById("form").addEventListener("submit",function(e){
+  e.preventDefault();
+  var n=document.getElementById("fn").value,m=document.getElementById("fm").value;
+  var q=m.trim().replace(/[.!]+$/,"");q=q.charAt(0).toLowerCase()+q.slice(1);
+  window.open(wa("Здравствуйте, меня зовут "+n.trim()+(q?", и я ищу "+q+".":". Хочу узнать про Mix House.")),"_blank");
+});
+
+// Движение кругов за курсором
+var mix=document.getElementById("mix");
+if(mix&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  window.addEventListener("pointermove",function(e){
+    var x=(e.clientX/innerWidth-.5)*24,y=(e.clientY/innerHeight-.5)*24;
+    mix.querySelector(".a").style.transform="translate("+(-x)+"px,"+(-y)+"px)";
+    mix.querySelector(".b").style.transform="translate("+x+"px,"+(-y)+"px)";
+    mix.querySelector(".c").style.transform="translate("+(x/2)+"px,"+y+"px)";
+  });
+}
+</script>
+<script>
+// бегущая лента
+(function(){
+  var W=["Макияж","Уход за лицом","Волосы","Ногти и ресницы","Аксессуары","Парфюмерия","Для телефона","Техника"];
+  var unit=W.map(function(w){return "<span>"+w+"</span>"}).join("");
+  var half=unit+unit;
+  document.querySelectorAll("[data-t]").forEach(function(t){t.innerHTML=half+half});
+})();
+// плавное появление блоков
+(function(){
+  if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+  var sel="section>h2,section>.sub,.quiz,.tabs,.item,.why>div,.steps>div,.cta,details,.info>*,.mapwrap";
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll(sel).forEach(function(el,i){el.classList.add("rv");el.style.transitionDelay=(i%4)*60+"ms";io.observe(el)});
+})();
+</script>
+</body>
+</html>
